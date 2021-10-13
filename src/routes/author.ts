@@ -9,6 +9,3 @@ AuthorRouter.get('/', (req, res) => {
 AuthorRouter.post('/', (req, res) => {
 	// TODO
 })
-
-AuthorRouter.
-
