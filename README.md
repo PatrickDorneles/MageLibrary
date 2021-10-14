@@ -1,5 +1,11 @@
 # MageLibrary 🧙‍♂️📕
 A library API to storage books data. This personal prototype project was made by me to learn more about express and REST APIs, and other libraries like prisma.
+
+
+[![NodeJS Badge](https://img.shields.io/badge/-NodeJS-339933?style=for-the-badge&logo=Node.JS&logoColor=white)](https://nodejs.org/en/)
+[![Prisma Badge](https://img.shields.io/badge/-Prisma-11354A?style=for-the-badge&logo=Prisma&logoColor=white)](https://www.prisma.io/)
+[![Typescript Badge](https://img.shields.io/badge/-Typescript-3179C7?style=for-the-badge&logo=Typescript&logoColor=white)](https://www.typescriptlang.org/)
+
 ## Starting
 To run or build this project you should have these requirements installed:
 - NodeJS 14+
