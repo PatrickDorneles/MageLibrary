@@ -1,11 +1,12 @@
-import express from 'express'
+import { Router } from 'express'
 
-const AuthorRouter = express.Router()
+export const AuthorRouter = Router()
 
-AuthorRouter.get('/', (req, res) => {
+AuthorRouter.get('/', () => {
 	// TODO
 })
 
-AuthorRouter.post('/', (req, res) => {
+AuthorRouter.post('/', () => {
 	// TODO
 })
+

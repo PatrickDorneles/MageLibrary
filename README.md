@@ -1,7 +1,6 @@
 # MageLibrary 🧙‍♂️📕
 A library API to storage books data. This personal prototype project was made by me to learn more about express and REST APIs, and other libraries like prisma.
 
-
 [![NodeJS Badge](https://img.shields.io/badge/-NodeJS-339933?style=for-the-badge&logo=Node.JS&logoColor=white)](https://nodejs.org/en/)
 [![Prisma Badge](https://img.shields.io/badge/-Prisma-11354A?style=for-the-badge&logo=Prisma&logoColor=white)](https://www.prisma.io/)
 [![Typescript Badge](https://img.shields.io/badge/-Typescript-3179C7?style=for-the-badge&logo=Typescript&logoColor=white)](https://www.typescriptlang.org/)
@@ -20,6 +19,8 @@ DATABASE_URL: [YOUR DATABASE URL (like this: "postgresql://user:pass@localhost:5
 PORT: [YOUR FAVORITE PORT]
 ```
 ### 3. Create the database tables
-(TODO)
+After setting your database you can put your database in sync with the project schema by running ```npx prisma db push``` or creating a [migration](https://www.prisma.io/docs/concepts/components/prisma-migrate).
+
+If you change the schema be sure to run ```npx prisma generate dev``` and do the process above.
 ### 4. Run or build the application
 (TODO)
