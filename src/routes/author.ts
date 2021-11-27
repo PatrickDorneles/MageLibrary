@@ -1,12 +1,10 @@
 import { Router } from 'express'
+import { AuthorController } from '../controllers/author'
 
-export const AuthorRouter = Router()
+export function createAuthorRouter(controller: AuthorController) {
+	const router = Router()
 
-AuthorRouter.get('/', () => {
-	// TODO
-})
-
-AuthorRouter.post('/', () => {
-	// TODO
-})
-
+	router.get('/:id', controller.getAuthorById)
+	
+	return router
+}

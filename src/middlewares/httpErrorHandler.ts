@@ -1,12 +1,12 @@
 import { ErrorRequestHandler } from 'express'
-import createHttpError from 'http-errors'
+import { HttpError, isHttpError } from 'http-errors'
 
 export const httpErrorHandler: ErrorRequestHandler = (err, req, res, next) => {
-	const isHttpError = createHttpError.isHttpError(err)
+	const isErrHttpError = isHttpError(err)
 	
-	if(isHttpError) {
-		const httpErr = err as createHttpError.HttpError
-		return res.status(httpErr.status).send({ message: httpErr.message })
+	if(isErrHttpError) {
+		const httpErr = err as HttpError
+		return res.status(httpErr.status).json({ message: httpErr.message })
 	}
 
 	next(err)

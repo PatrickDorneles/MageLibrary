@@ -1,7 +1,11 @@
 import { Router } from 'express'
+import { BookController } from '../controllers/book'
 
-export const BookRouter = Router()
+export function createBookRouter(controller: BookController) {
+	const router = Router()
 
-BookRouter.get('/', () => {
-	// TODO
-})
+	router.get(':id', controller.getBookById)
+
+
+	return router
+}

@@ -1,9 +1,11 @@
 import { ErrorRequestHandler } from 'express'
-import createHttpError from 'http-errors'
+import { InternalServerError } from 'http-errors'
 
 
-export const errorHandler: ErrorRequestHandler = (err, req, res, next) => {
-	const httpErr = new createHttpError.InternalServerError(`Internal Error: ${err}`)
+export const errorHandler: ErrorRequestHandler = (err, req, res) => {
+	const httpErr = new InternalServerError('Internal Server Error')
+
+	console.error(err)
 
 	return res.status(httpErr.status).send(httpErr.message)
 }

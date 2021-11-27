@@ -1,7 +1,15 @@
 import { PrismaClient } from '.prisma/client'
 
-const prisma = new PrismaClient()
+export function createUserService(prisma: PrismaClient) {
 
-export const UserService = {
+	async function findUserById(id: string) {
+		return await prisma.user.findFirst({
+			where: { id }
+		})
+	}
     
+
+	return { findUserById }
 }
+
+export type UserService = ReturnType<typeof createUserService>

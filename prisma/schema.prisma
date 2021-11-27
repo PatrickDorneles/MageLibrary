@@ -11,35 +11,35 @@ generator client {
 }
 
 model Author {
-  id String @id @default(uuid())
+  id   String  @id @default(uuid())
   name String
-  bio String? @db.Text
+  bio  String? @db.Text
 
   books Book[]
 }
 
 model Genre {
-  id String @id @default(uuid())
+  id   String @id @default(uuid())
   name String
 
   books Book[]
 }
 
 model Book {
-  id String @id @default(uuid())
-  title String
+  id          String @id @default(uuid())
+  title       String
   description String
-  
-  genre Genre @relation(fields: [genreId], references: [id])
+
+  genre   Genre  @relation(fields: [genreId], references: [id])
   genreId String
 
-  author Author @relation(fields: [authorId], references: [id])
+  author   Author @relation(fields: [authorId], references: [id])
   authorId String
 }
 
 model User {
-  id String @id @default(uuid())
+  id       String  @id @default(uuid())
   username String
   password String
-  isAdmin Boolean
+  isAdmin  Boolean
 }
